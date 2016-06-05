@@ -1,0 +1,16 @@
+{
+  "name": "fleetr-processor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "MQTT_URL=mqtt://gps.kale-bg.com:10028 MQTT_CLIENT_ID=gantcho@mbpro MONGO_URL=mongodb://localhost:3001/meteor node_modules/coffee-script/bin/coffee index.coffee"
+  },
+  "author": "Gantcho Kojuharov <gantcho@greyarch.net> (http://greyarch.net)",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "mongodb": "^2.1.21",
+    "mqtt": "^1.11.0"
+  }
+}
