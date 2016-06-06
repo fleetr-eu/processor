@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "coffee-script": "^1.10.0",
+    "ejson": "^2.1.2",
     "mongodb": "^2.1.21",
     "mqtt": "^1.11.0"
   }

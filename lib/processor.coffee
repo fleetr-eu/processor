@@ -29,10 +29,8 @@ processRecord = (db, record) ->
       else
         cb?(v)
 
-  if typeof record.recordTime is 'string'
-    record.recordTime = new Date(record.recordTime)
-  else if record.recordTime.$date
-    record.recordTime = new Date(record.recordTime.$date)
+  record.recordTime = new Date(record.recordTime.$date)
+  record.fixTime = new Date(record.fixTime.$date)
 
   existing =
     deviceId: record.deviceId
