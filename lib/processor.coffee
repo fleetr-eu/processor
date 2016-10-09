@@ -60,7 +60,7 @@ processRecord = (db, record) ->
             lng: record.lng
             loc: record.loc
             address: record.address
-            odometer: record.odometer
+            odometer: parseInt(record.odometer)
             state: record.state
             tripTime: record.attributes?.tripTime
             idleTime: record.attributes?.idleTime
