@@ -9,8 +9,8 @@
   "author": "Gantcho Kojuharov <gantcho@greyarch.net> (http://greyarch.net)",
   "license": "ISC",
   "dependencies": {
-    "coffee-script": "^1.10.0",
+    "coffee-script": "^1.11.1",
     "mongodb": "^2.1.21",
-    "mqtt": "^1.11.0"
+    "mqtt": "^2.0.1"
   }
 }
