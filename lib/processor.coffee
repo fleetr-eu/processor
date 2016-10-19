@@ -45,9 +45,9 @@ processRecord = (db, record) ->
       else
         if v
           record.odometer = if record?.attributes?.odometer
-            record.attributes.odometer
+            parseInt record.attributes.odometer
           else
-            (v?.odometer or 0) + (record?.distance or 0)
+            parseInt(v?.odometer or 0) + parseInt(record?.distance or 0)
 
           record.speed = knotsToKph(record.speed)
           record.maxSpeed = knotsToKph(record.maxSpeed)
@@ -60,7 +60,7 @@ processRecord = (db, record) ->
             lng: record.lng
             loc: record.loc
             address: record.address
-            odometer: parseInt(record.odometer)
+            odometer: record.odometer
             state: record.state
             tripTime: record.attributes?.tripTime
             idleTime: record.attributes?.idleTime
@@ -71,6 +71,7 @@ processRecord = (db, record) ->
           updateTyres v, (record?.distance or 0)
         else
           console.log "No vehicle found with unitId #{record.deviceId}"
+          record.odometer = parseInt(record.odometer or 0)
           insertInLogbook record
 
 module.exports = processRecord
