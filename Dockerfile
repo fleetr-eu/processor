@@ -1,12 +1,11 @@
-FROM alpine:3.4
+FROM alpine:3.7
 
-RUN apk add --no-cache nodejs && \
-    npm i -g yarn
+RUN apk add --no-cache nodejs
 
 ADD . /app/
 
 WORKDIR /app
 
-RUN yarn install --production
+RUN npm i --production
 
-CMD node_modules/coffee-script/bin/coffee index.coffee
+CMD npm start
