@@ -1,16 +1,17 @@
 {
   "name": "fleetr-processor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.coffee",
   "scripts": {
-    "test": "MQTT_URL=mqtt://gps.kale-bg.com:10028 MQTT_CLIENT_ID=gantcho@mbpro MONGO_URL=mongodb://localhost:3001/meteor node_modules/coffee-script/bin/coffee index.coffee"
+    "dev": "MQTT_URL=mqtt://gps.kale-bg.com:10028 MQTT_CLIENT_ID=gantcho@mbpro MONGO_URL=mongodb://localhost:3001/meteor coffee index.coffee",
+    "start": "coffee index.coffee"
   },
   "author": "Gantcho Kojuharov <gantcho@greyarch.net> (http://greyarch.net)",
   "license": "ISC",
   "dependencies": {
-    "coffee-script": "^1.11.1",
-    "mongodb": "^2.1.21",
-    "mqtt": "^2.0.1"
+    "coffee-script": "^1.12.7",
+    "mongodb": "^2.2.35",
+    "mqtt": "^2.18.2"
   }
 }
