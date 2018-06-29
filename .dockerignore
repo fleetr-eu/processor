@@ -2,5 +2,3 @@
 .gitignore
 .dockerignore
 Dockerfile
-build.sh
-Dockerfile.build
